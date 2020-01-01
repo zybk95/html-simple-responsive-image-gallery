@@ -1,0 +1,22 @@
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem; }
+  .container-grid-cell {
+    margin: 0.5rem; }
+    .container-grid-cell-image {
+      max-width: 100%; }
+    .container-grid-cell img {
+      display: block; }
+  @media screen and (min-width: 600px) {
+    .container-grid {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row; }
+      .container-grid-cell {
+        width: 50%;
+        width: calc(50% - 2rem); } }
+  @media screen and (min-width: 1000px) {
+    .container-grid-cell {
+      width: calc(100% / 4);
+      width: calc(25% - 2rem); } }
