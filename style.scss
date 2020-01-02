@@ -5,11 +5,32 @@
   &-grid {
     &-cell {
       margin: 0.5rem;
-      &-image {
-        max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-link {
+        position: inherit;
+        float: left;
+        overflow: hidden;
+        width: 220px;
+        height: 350px;
+        border-radius: 10%;
+        border: 1px solid #999;
+
+        &-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 50% 15%;
+        }
       }
-      img {
-        display: block;
+
+      &-button {
+        margin-top: 8px;
+        width: 80px;
+        align-self: center;
       }
     }
     @media screen and (min-width: 600px) {
@@ -19,12 +40,14 @@
       &-cell {
         width: 50%;
         width: calc(50% - 2rem);
+        // max-height: 100%;
       }
     }
     @media screen and (min-width: 1000px) {
       &-cell {
         width: calc(100% / 4);
         width: calc(25% - 2rem);
+        height: 100%;
       }
     }
   }
